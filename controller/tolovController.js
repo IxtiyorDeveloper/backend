@@ -8,7 +8,7 @@ exports.register = async (req, res,next) => {
         }else {
             const result = new Tolov({
                 ...req.body,
-                img: `http://185.217.131.79/api/${req.file.path.slice(7)}`
+                img: `http://185.217.131.79/${req.file.path.slice(7)}`
             })
             result.save()
             res.json({data: result})

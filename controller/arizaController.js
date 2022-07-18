@@ -5,7 +5,7 @@ exports.register = async (req, res) => {
     try {
         const result = new Ariza({
             ...req.body,
-            bio_img: `http://185.217.131.79/api/${req.file.path.slice(7)}`
+            bio_img: `http://185.217.131.79/${req.file.path.slice(7)}`
         })
         result.save()
         res.status(200).json({ data: result })
